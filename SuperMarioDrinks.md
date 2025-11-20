@@ -58,7 +58,7 @@ stateDiagram
 
 **Bot:** "Beleza! Heineken escolhida. Agora, informe a quantidade e o tipo de embalagem (ex: lata, garrafa, long neck, caixa)"
 
-**Cliente:** "3 caixas"
+**Cliente:** "3 caixa"
 
 **Bot:** "Perfeito! Agora me passe o endereço e um telefone para contato."
 
