@@ -33,7 +33,7 @@ stateDiagram
 | ------------------- | -------------------- | ------------------- | ----------------------- |
 | **(início)**        | —                    | **SAUDACAO**        | Entrada no fluxo        |
 | SAUDACAO            | "quero pedir"        | ESCOLHER_BEBIDA     | Usuário inicia o pedido |
-| ESCOLHER_BEBIDA     | bebida válida        | ESCOLHER_QUANTIDADE | Seleção da bebida       |
+| ESCOLHER_BEBIDA     | bebida válida        | ESCOLHER_QUANTIDADE | Seleção bebida          |
 | ESCOLHER_QUANTIDADE | quantidade/embalagem | INFORMAR_ENDERECO   | Quantidade definida     |
 | INFORMAR_ENDERECO   | endereço válido      | CONFIRMAR           | Coleta do endereço      |
 | CONFIRMAR           | "confirmar"          | PAGAMENTO           | Confirmação             |
