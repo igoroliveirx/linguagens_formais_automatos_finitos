@@ -53,18 +53,28 @@ stateDiagram
 **Cliente:**"quero pedir"
 
 **Bot:** "Ótimo! Qual bebida você deseja? Exemplos: Heineken, Budweiser, Skol, Brahma, Coca, Fanta, Pepsi, Guaraná, Monster, Whisky, Água. Informe a bebida desejada."
-"Cliente: heineken"
-**Bot:** "Beleza! Heineken escolhida. Agora, informe a quantidade e o tipo de embalagem (ex: lata, garrafa, long neck, caixa)"
-**Cliente:** "3 caixas"
-**Bot:** "Perfeito! Agora me passe o endereço e um telefone para contato."
-**Cliente:** "Unialfa Perimetral 40028922"
-**Bot:** "Vamos confirmar seu pedido: Produto: Heineken; Quantidade: 3 caixas; Entrega: Unialfa Perimetral 40028922. Digite “confirmar”, “alterar” ou “cancelar”."
-**Cliente:** "confirmar"
-**Bot:** "Como deseja pagar? Digite “dinheiro” ou “cartão”."
-**Cliente:** "cartão"
-**Bot:** "Pedido confirmado! 🎉Resumo final: Produto: Heineken; Quantidade: 3 caixas; Endereço: Unialfa Perimetral 40028922; Pagamento: cartão"
-**Bot:** "Obrigado! A Super Mario Drinks agradece seu pedido. Sua entrega chegará em aproximadamente 20 minutos."
 
+**Cliente:** "heineken"
+
+**Bot:** "Beleza! Heineken escolhida. Agora, informe a quantidade e o tipo de embalagem (ex: lata, garrafa, long neck, caixa)"
+
+**Cliente:** "3 caixas"
+
+**Bot:** "Perfeito! Agora me passe o endereço e um telefone para contato."
+
+**Cliente:** "Unialfa Perimetral 40028922"
+
+**Bot:** "Vamos confirmar seu pedido: Produto: Heineken; Quantidade: 3 caixas; Entrega: Unialfa Perimetral 40028922. Digite “confirmar”, “alterar” ou “cancelar”."
+
+**Cliente:** "confirmar"
+
+**Bot:** "Como deseja pagar? Digite “dinheiro” ou “cartão”."
+
+**Cliente:** "cartão"
+
+**Bot:** "Pedido confirmado! 🎉Resumo final: Produto: Heineken; Quantidade: 3 caixas; Endereço: Unialfa Perimetral 40028922; Pagamento: cartão"
+
+**Bot:** "Obrigado! A Super Mario Drinks agradece seu pedido. Sua entrega chegará em aproximadamente 20 minutos."
 ---
 
 ## 5) Código em Java
