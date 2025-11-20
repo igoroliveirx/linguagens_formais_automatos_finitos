@@ -32,19 +32,18 @@ stateDiagram
 
 ## 3) Tabela de Estados e Transições
 
-| *Estado Atual*      | *Ação / Condição*    | *Próximo Estado*    | *Descrição da Transição*       |
-| --------------------- | ---------------------- | --------------------- | -------------------------------- |
-| ** (início)        | —                      | **SAUDACAO*          | Entrada inicial do fluxo.        |
-| *SAUDACAO*          | "quero pedir"          | *ESCOLHER_BEBIDA*   | Usuário inicia o pedido.         |
-| *ESCOLHER_BEBIDA*   | Bebida selecionada     |*ESCOLHER_QUANTIDADE*| Usuário escolhe a bebida.        |
-|*ESCOLHER_QUANTIDADE| Quantidade selecionada | **ESCOLHER_EMBALAGEM*| Usuário informa quantidade.      |
-| *ESCOLHER_EMBALAGEM| Embalagem selecionada  | **INFORMAR_ENDERECO* | Usuário informa a embalagem.     |
-| *INFORMAR_ENDERECO* | Endereço recebido      | *CONFIRMAR*         | Usuário fornece endereço.        |
-| *CONFIRMAR*         | "confirmar pedido"     | *PAGAMENTO*         | Usuário confirma o pedido.       |
-| *CONFIRMAR*         | "alterar"              | *ESCOLHER_BEBIDA*   | Usuário deseja alterar o pedido. |
-| *CONFIRMAR*         | "cancelar"             | *** (fim)           | Pedido cancelado.                |
-| *PAGAMENTO*         | Pagamento confirmado   | *FINALIZADO*        | Pagamento validado.              |
-| *FINALIZADO*        | —                      | *** (fim)           | Encerramento do processo.        |
+| *Estado Atual*      | *Ação / Condição*      | *Próximo Estado*     | *Descrição da Transição*         |
+| ------------------- | ---------------------- | ---------------------| -------------------------------- |
+| ** (início)         | —                      | **SAUDACAO*          | Entrada inicial do fluxo.        |
+| *SAUDACAO*          | "quero pedir"          | *ESCOLHER_BEBIDA*    | Usuário inicia o pedido.         |
+| *ESCOLHER_BEBIDA*   | Bebida selecionada     |*ESCOLHER_QUANTIDADE* | Usuário escolhe a bebida.        |
+|*ESCOLHER_QUANTIDADE | Quantidade selecionada | **ESCOLHER_EMBALAGEM*| Usuário informa quantidade.      |
+| *ESCOLHER_EMBALAGEM | Endereço recebido      | *CONFIRMAR*          | Usuário fornece endereço.        |
+| *CONFIRMAR*         | "confirmar pedido"     | *PAGAMENTO*          | Usuário confirma o pedido.       |
+| *CONFIRMAR*         | "alterar"              | *ESCOLHER_BEBIDA*    | Usuário deseja alterar o pedido. |
+| *CONFIRMAR*         | "cancelar"             | *** (fim)            | Pedido cancelado.                |
+| *PAGAMENTO*         | Pagamento confirmado   | *FINALIZADO*         | Pagamento validado.              |
+| *FINALIZADO*        | —                      | *** (fim)            | Encerramento do processo.        |
 
 
 ---
@@ -69,7 +68,6 @@ Quantidade: 3 caixas
 Entrega: Unialfa Perimetral 40028922
 Digite “confirmar”, “alterar” ou “cancelar”.
 Cliente: confirmar
-
 Bot: Como deseja pagar? Digite “dinheiro” ou “cartão”.
 Cliente: cartão
 Bot: Pedido confirmado! 🎉
