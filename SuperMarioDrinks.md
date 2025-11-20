@@ -13,38 +13,35 @@ Cada estado define uma ação específica, garantindo uma interação estruturad
 stateDiagram
   direction TB
   [*] --> SAUDACAO
-  SAUDACAO --> ESCOLHER_SABOR:"quero pedir"
-  ESCOLHER_SABOR --> ESCOLHER_TAMANHO:bebida selecionada
-  ESCOLHER_TAMANHO --> ESCOLHER_BEBIDA:quantidade selecionada
-  ESCOLHER_BEBIDA --> INFORMAR_ENDERECO:embalagem selecionada
-  INFORMAR_ENDERECO --> CONFIRMAR:endereço recebido
-  CONFIRMAR --> PAGAMENTO:confirmar pedido
-  PAGAMENTO --> FINALIZADO:pagamento confirmado
-  CONFIRMAR --> ESCOLHER_SABOR:"alterar"
-  CONFIRMAR --> [*]:"cancelar"
+  SAUDACAO --> ESCOLHER_BEBIDA: "quero pedir"
+  ESCOLHER_BEBIDA --> ESCOLHER_QUANTIDADE: bebida selecionada
+  ESCOLHER_QUANTIDADE --> INFORMAR_ENDERECO: quantidade selecionada
+  INFORMAR_ENDERECO --> CONFIRMAR: endereço recebido
+  CONFIRMAR --> PAGAMENTO: confirmar pedido
+  PAGAMENTO --> FINALIZADO: pagamento confirmado
+  CONFIRMAR --> ESCOLHER_BEBIDA: "alterar"
+  CONFIRMAR --> [*]: "cancelar"
   FINALIZADO --> [*]
-  ESCOLHER_SABOR:ESCOLHER_BEBIDA
-  ESCOLHER_TAMANHO:ESCOLHER_QUANTIDADE
-  ESCOLHER_BEBIDA:ESCOLHER_EMBALAGEM
+
 ```
 
 ---
 
 ## 3) Tabela de Estados e Transições
 
-| **Estado Atual**      | **Ação / Condição**    | **Próximo Estado**    | **Descrição da Transição**       |
-| --------------------- | ---------------------- | --------------------- | -------------------------------- |
-| ***** (início)        | —                      | **SAUDACAO**          | Entrada inicial do fluxo.        |
-| **SAUDACAO**          | "quero pedir"          | **ESCOLHER_SABOR**    | Usuário inicia o pedido.         |
-| **ESCOLHER_SABOR**    | Bebida selecionada     | **ESCOLHER_TAMANHO**  | Usuário escolhe a bebida.        |
-| **ESCOLHER_TAMANHO**  | Quantidade selecionada | **ESCOLHER_BEBIDA**   | Usuário informa quantidade.      |
-| **ESCOLHER_BEBIDA**   | Embalagem selecionada  | **INFORMAR_ENDERECO** | Usuário informa a embalagem.     |
-| **INFORMAR_ENDERECO** | Endereço recebido      | **CONFIRMAR**         | Usuário fornece endereço.        |
-| **CONFIRMAR**         | "confirmar pedido"     | **PAGAMENTO**         | Usuário confirma o pedido.       |
-| **CONFIRMAR**         | "alterar"              | **ESCOLHER_SABOR**    | Usuário deseja alterar o pedido. |
-| **CONFIRMAR**         | "cancelar"             | ***** (fim)           | Pedido cancelado.                |
-| **PAGAMENTO**         | Pagamento confirmado   | **FINALIZADO**        | Pagamento validado.              |
-| **FINALIZADO**        | —                      | ***** (fim)           | Encerramento do processo.        |
+| Estado Atual        | Ação / Condição      | Próximo Estado      | Descrição               |
+| ------------------- | -------------------- | ------------------- | ----------------------- |
+| **(início)**        | —                    | **SAUDACAO**        | Entrada no fluxo        |
+| SAUDACAO            | "quero pedir"        | ESCOLHER_BEBIDA     | Usuário inicia o pedido |
+| ESCOLHER_BEBIDA     | bebida válida        | ESCOLHER_QUANTIDADE | Seleção da bebida       |
+| ESCOLHER_QUANTIDADE | quantidade/embalagem | INFORMAR_ENDERECO   | Quantidade definida     |
+| INFORMAR_ENDERECO   | endereço válido      | CONFIRMAR           | Coleta do endereço      |
+| CONFIRMAR           | "confirmar"          | PAGAMENTO           | Confirmação             |
+| CONFIRMAR           | "alterar"            | ESCOLHER_BEBIDA     | Recomeçar escolha       |
+| CONFIRMAR           | "cancelar"           | **(fim)**           | Cancelamento            |
+| PAGAMENTO           | pagamento definido   | FINALIZADO          | Finalização             |
+| FINALIZADO          | —                    | **(fim)**           | Encerramento            |
+
 
 
 ---
